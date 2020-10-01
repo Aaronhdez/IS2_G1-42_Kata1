@@ -17,10 +17,8 @@ public class Kata_1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        LocalDate date = LocalDate.of(1949, Month.SEPTEMBER, 24);
-        
-        Person p = new Person("Blas", date);
+    public static void main(String[] args) {       
+        Person p = new Person("Blas", LocalDate.of(1949, Month.SEPTEMBER, 24));
         System.out.println(p.getName() + " tiene " + p.getAge() + " años");
     }
     

@@ -6,7 +6,6 @@
 package kata_1;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.Period;
 
 /**
@@ -16,7 +15,6 @@ import java.time.Period;
 public class Person {
     private final String name;
     private final LocalDate birthdate;
-    private final long MILLISECONDS_PER_YEAR = (long) (1000*60*60*24*365.25);
 
     public Person(String name, LocalDate birthdate) {
         this.name = name;
@@ -37,7 +35,6 @@ public class Person {
     }
     
     public int getAge(){
-        Period years = this.birthdate.until(LocalDate.now());
-        return years.getYears();
+        return Period.between(birthdate, LocalDate.now()).getYears();
     }
 }
